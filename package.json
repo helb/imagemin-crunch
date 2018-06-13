@@ -1,0 +1,26 @@
+{
+  "name": "imagemin-crunch",
+  "version": "1.0.0",
+  "description": "Optimize PNGs using chained pngquant and zopfli",
+  "main": "index.js",
+  "dependencies": {
+    "exec-buffer": "^3.2.0",
+    "imagemin": "^5.3.1",
+    "is-png": "^1.1.0",
+    "pngquant-bin": "^4.0.0",
+    "zopflipng-bin": "^4.1.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "pify": "^3.0.0",
+    "xo": "^0.21.1"
+  },
+  "author": {
+    "email": "helb@helb.cz",
+    "url": "https://github.com/helb"
+  },
+  "license": "GPLv3"
+}
