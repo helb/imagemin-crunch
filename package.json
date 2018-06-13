@@ -22,5 +22,6 @@
     "email": "helb@helb.cz",
     "url": "https://github.com/helb"
   },
+	"repository": "github:helb/imagemin-crunch",
   "license": "GPLv3"
 }
