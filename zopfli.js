@@ -1,5 +1,5 @@
 const execBuffer = require('exec-buffer');
-const bin = require('zopflipng-bin');
+const bin = require('zopflipng-chrissimpkins-bin');
 
 module.exports = input => {
 	const args = [
