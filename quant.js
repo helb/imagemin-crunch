@@ -15,6 +15,11 @@ module.exports = input => {
 		bin,
 		args
 	}).catch(err => {
+		if ([98, 99].includes(err.code)) {
+			// 98: output is bigger than input
+			// 99: quality falls below the min value
+			return input;
+		}
 		err.message = err.stderr || err.message;
 		throw err;
 	});

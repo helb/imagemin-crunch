@@ -11,5 +11,5 @@ module.exports = () => input => {
 		return Promise.resolve(input);
 	}
 
-	return runQuant(input).then(intermed => runZopfli(intermed));
+	return runQuant(input).then(intermed => runZopfli(intermed, intermed !== input));
 };

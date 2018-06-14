@@ -21,3 +21,11 @@ test('optimize a PNG', async t => {
 	t.true(data.length < buf.length);
 	t.true(isPng(data));
 });
+
+test('optimize a PNG that can\'t be quanized', async t => {
+	const buf = await fsP.readFile(path.join(__dirname, 'fixtures/test-noquant.png'));
+	const data = await m()(buf);
+
+	t.true(data.length < buf.length);
+	t.true(isPng(data));
+});
