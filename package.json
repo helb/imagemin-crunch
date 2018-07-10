@@ -19,9 +19,10 @@
     "xo": "^0.21.1"
   },
   "author": {
+    "name": "helb",
     "email": "helb@helb.cz",
     "url": "https://github.com/helb"
   },
   "repository": "github:helb/imagemin-crunch",
-  "license": "GPL-3.0"
+  "license": "MIT"
 }
