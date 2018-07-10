@@ -15,15 +15,17 @@ test('skip optimizing a non-PNG file', async t => {
 });
 
 test('optimize a PNG', async t => {
-	const buf = await fsP.readFile(path.join(__dirname, 'fixtures/test.png'));
+	const filePath = path.join(__dirname, 'fixtures/test.png');
+	const buf = await fsP.readFile(filePath);
 	const data = await m()(buf);
 
 	t.true(data.length < buf.length);
 	t.true(isPng(data));
 });
 
-test('optimize a PNG that can\'t be quantized', async t => {
-	const buf = await fsP.readFile(path.join(__dirname, 'fixtures/test-noquant.png'));
+test('optimize a PNG that can’t be quantized', async t => {
+	const filePath = path.join(__dirname, 'fixtures/test-noquant.png');
+	const buf = await fsP.readFile(filePath);
 	const data = await m()(buf);
 
 	t.true(data.length < buf.length);
